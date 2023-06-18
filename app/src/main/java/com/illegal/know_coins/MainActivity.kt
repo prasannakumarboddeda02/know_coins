@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                 var coins : List<CoinsDtoItem> by remember{
                     mutableStateOf(emptyList())
                 }
-                coinsListScreenViewModel.data.observe(this, Observer {
+                coinsListScreenViewModel.data.observe(this, Observer{
                     coins = it
                 })
                 // A surface container using the 'background' color from the theme
