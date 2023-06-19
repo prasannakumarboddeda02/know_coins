@@ -1,4 +1,4 @@
-package com.illegal.know_coins.ui.theme.models
+package com.illegal.know_coins.ui.viewmodels
 
 import android.util.Log
 import androidx.lifecycle.LiveData

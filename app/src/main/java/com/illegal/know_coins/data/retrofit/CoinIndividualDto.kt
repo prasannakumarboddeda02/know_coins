@@ -1,5 +1,11 @@
 package com.illegal.know_coins.data.retrofit
 
+import com.illegal.know_coins.data.retrofit.models.Links
+import com.illegal.know_coins.data.retrofit.models.LinksExtended
+import com.illegal.know_coins.data.retrofit.models.Tag
+import com.illegal.know_coins.data.retrofit.models.Team
+import com.illegal.know_coins.data.retrofit.models.Whitepaper
+
 data class CoinIndividualDto(
     val description: String,
     val development_status: String,

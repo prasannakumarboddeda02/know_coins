@@ -1,4 +1,4 @@
-package com.illegal.know_coins.data.retrofit
+package com.illegal.know_coins.data.retrofit.models
 
 data class LinksExtended(
     val stats: Stats,
