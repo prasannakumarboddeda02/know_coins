@@ -4,16 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.runtime.getValue
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.Observer
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.illegal.know_coins.data.retrofit.CoinsDtoItem
 import com.illegal.know_coins.data.retrofit.RetrofitApi
 import com.illegal.know_coins.ui.navigation.NavigationHost
 import com.illegal.know_coins.ui.theme.Know_coinsTheme
@@ -34,14 +26,6 @@ class MainActivity : ComponentActivity() {
             Know_coinsTheme {
 
                 navController = rememberNavController()
-                var coins : List<CoinsDtoItem> by remember{
-                    mutableStateOf(emptyList())
-                }
-                coinsListScreenViewModel.data.observe(this, Observer{
-                    coins = it
-                })
-                // A surface container using the 'background' color from the theme
-                coinsListScreenViewModel.getCoins()
                 NavigationHost(
                     navController = navController,
                     coinsListScreenViewModel = coinsListScreenViewModel
@@ -61,15 +45,6 @@ class MainActivity : ComponentActivity() {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build().create(RetrofitApi::class.java)
         }
-
-    }
-}
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Know_coinsTheme {
 
     }
 }
