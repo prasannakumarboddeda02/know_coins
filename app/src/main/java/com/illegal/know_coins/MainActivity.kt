@@ -24,7 +24,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Know_coinsTheme {
-
                 navController = rememberNavController()
                 NavigationHost(
                     navController = navController,
